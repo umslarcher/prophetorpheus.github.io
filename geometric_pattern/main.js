@@ -10,7 +10,6 @@ function setup() {
   circleRadius = circleDiameter/2;
 }
 
-
 function draw() {
   rVal = 255;
   gVal = 0;
