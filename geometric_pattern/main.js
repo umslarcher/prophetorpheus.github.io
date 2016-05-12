@@ -40,3 +40,10 @@ function draw() {
     bVal = (bVal + 2)%256;
   }
 }
+
+function keyPressed() {
+  if (keyCode === 115 || keyCode === 83) {
+    saveCanvas('geometricPattern', 'png');
+  }
+  return false;
+}
