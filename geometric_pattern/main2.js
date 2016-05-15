@@ -32,7 +32,7 @@ function freeze() {
 }
 
 function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
+  if (keyCode === LEFT_ARROW && NUM_CIRCLES > 1) {
     NUM_CIRCLES--;
     reset();
   }
