@@ -1,0 +1,19 @@
+body {
+    font-family: Helvetica;
+    margin: 50px;
+}
+.new-note {
+    border: 1px solid black;
+    padding: 10px;
+}
+.new-note * {
+    display: block;
+    margin-bottom: 5px;
+}
+.note-title {
+    margin-bottom: 0;
+}
+.note-date {
+    font-style: italic;
+    margin-top: 0;
+}
