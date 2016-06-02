@@ -38,7 +38,7 @@ function displayNotes() {
     var thisNote = $("<div>").addClass("note");
     var noteTitleDisplay = $("<h2>").addClass("note-title").text(noteTitle);
     var noteDateDisplay = $("<p>").addClass("note-date").text(noteDate);
-    var noteContentDisplay = $("<p>").addClass("note-content").text(noteContent);
+    var noteContentDisplay = $("<p>").addClass("note-content").html(noteContent);
 
     thisNote.append(noteTitleDisplay);
     thisNote.append(noteDateDisplay);
