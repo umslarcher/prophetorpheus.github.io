@@ -1,43 +1,53 @@
 var NUM_CIRCLES = 12;
+
+var circleDiameter;
 var circleRadius;
+
 var rVal;
 var gVal;
 var bVal;
 
 function setup() {
-  createCanvas(480,600);
+  createCanvas(480, 600);
+
   circleDiameter = width/NUM_CIRCLES;
   circleRadius = circleDiameter/2;
 }
 
 function draw() {
+  var isShifted = false;
+
   rVal = 255;
   gVal = 0;
   bVal = 0;
-  var alternatingRow = false;
 
   var y = height;
   while (y >= 0) {
+
     var x;
 
-    if (alternatingRow) {
+    if (isShifted) {
       x = circleRadius;
     } else {
       x = 0;
     }
 
     while (x <= width) {
-      stroke(color(rVal, gVal, bVal));
       fill(color(rVal, gVal, bVal));
+      stroke(color(rVal, gVal, bVal));
       ellipse(x, y, circleDiameter, circleDiameter);
       x = x + circleDiameter;
     }
-    y = y - circleRadius;
-    alternatingRow = !alternatingRow;
 
-    rVal = (rVal + 255)%256;
-    gVal = (gVal + 5)%256;
-    bVal = (bVal + 2)%256;
+    stroke(color(rVal, gVal, bVal));
+    fill(color(rVal, gVal, bVal));
+
+    y = y - circleRadius;
+    isShifted = !isShifted;
+
+    rVal = (rVal - 2) % 256;
+    gVal = (gVal + 7) % 256;
+    bVal = (bVal + 3) % 256;
   }
 }
 
