@@ -27,7 +27,6 @@ function draw() {
   } else {
     if (enemy.overlap(player)) {
       isGameOver = true;
-      gameOver();
     }
     background(backgroundImage);
     if (keyDown(RIGHT_ARROW) && player.position.x < (width - (playerImage.width / 2))) {
