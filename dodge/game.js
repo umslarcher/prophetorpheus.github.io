@@ -27,8 +27,6 @@ function draw() {
   } else {
     if (enemy.overlap(player)) {
       isGameOver = true;
-    }
-    if (enemy.overlap(player)) {
       gameOver();
     }
     background(backgroundImage);
